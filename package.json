@@ -1,5 +1,5 @@
 {
-	"name": "@58fe/require-cli",
+	"name": "require-to-webpack-cli",
 	"version": "1.0.0",
 	"description": "A simple CLI for scaffolding requirejs projects.",
 	"main": "index.js",
