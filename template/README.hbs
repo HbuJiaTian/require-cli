@@ -1,0 +1,34 @@
+# {{name}}
+
+> {{description}}
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# server run at localhost:8080
+npm run build
+
+```
+
+## 迁移步骤
+
+1. 将 requirejs 的页面入口文件代码（路径目录：\_pkg/job/）复制到/src/index.js中；
+2. 将引用模块文件拷贝到job或common中（对应原引用路径）
+3. 将index.js的入口引用路径改为相对路径（./job）
+4. 页面css拷贝到src/css文件夹下，打包时会自动copy到dist/css目录下
+
+## 上线步骤
+1. 前端代码通过arthur构建上线
+2. 修改模版，主要改以下四处：
+* 修改css路径
+* 隐藏____loadCfg变量
+* 删除boot文件
+* 删除加载模块（require_jquery_load.js可改为jquery文件路径，也可不改）
+* M 端页面若引用了 EMS 监控，将 esl_zepto_load.min.js 改为普通的线上 zepto 文件路径：//j1.58cdn.com.cn/m58/js/zepto.min.v_120.js
+* 引入arthur上线打包后的js文件
+
+## 代码执行中容易出现的问题：
+1. xxx is not defined：由于变量声明没有加var导致

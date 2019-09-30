@@ -1,0 +1,34 @@
+{
+	"name": "@58fe/require-cli",
+	"version": "1.0.0",
+	"description": "A simple CLI for scaffolding requirejs projects.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"bin": {
+		"require": "./bin/require-init.js"
+	},
+	"dependencies": {
+		"chalk": "^2.4.2",
+		"commander": "^2.20.0",
+		"figlet": "^1.2.3",
+		"fs-extra": "^8.0.1",
+		"handlebars": "^4.1.2",
+		"inquirer": "^6.4.0",
+		"ora": "^3.4.0"
+	},
+	"keywords": [
+		"require",
+		"webpack"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/HbuJiaTian/require-cli.git"
+	},
+	"author": "Alex",
+	"license": "MIT",
+	"publishConfig": {
+		"registry": "http://ires.58corp.com/repository/npm/"
+	}
+}
